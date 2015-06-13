@@ -1,0 +1,208 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Dosis:500,600);
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: dosis;
+  box-sizing: border-box;
+}
+
+input { overflow: visible; }
+
+$dist-xxl: 96px;
+$dist-xl: 48px;
+$dist-l: 24px;
+$dist-m: 16px;
+$dist-s: 8px;
+
+$text-l: 20px;
+$text-m: 16px;
+$text-s: 12px;
+$text-xs: 10px;
+
+$clr-txt:           #444;
+$clr-screen:        #ececec;
+$clr-screen-top:    #ccc;
+$clr-btn-scr-add:   rgb(53, 126, 189);
+$clr-btn-scr-add-t: rgb(0, 73, 136);
+$clr-btn-scr-del:   rgb(217, 83, 79);
+$clr-btn-scr-del-t: rgb(164, 30, 26);
+
+@mixin pad-top-btm($dist) {
+  padding-top: $dist;
+  padding-bottom: $dist;
+}
+
+@mixin mar-top-btm($dist) {
+  margin-top: $dist;
+  margin-bottom: $dist;
+}
+
+::-webkit-input-placeholder {
+  font-size: $text-s;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+.btn {
+  text-align: center;
+  font-size: $text-l;
+  display: block;
+  border: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: $dist-l;
+  height: 100%;
+}
+
+// .alert {
+//   display: none;
+//   position: absolute;
+//   left: 32px;
+//   top: 52px;
+//   z-index: 100;
+// }
+
+.popover {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.popover.top > .arrow {
+  border-top-color: #faebcc;
+}
+
+.popover.top > .arrow:after {
+  border-top-color: #fcf8e3;
+}
+
+.popover.right > .arrow {
+  border-right-color: #faebcc;
+}
+
+.popover.right > .arrow:after {
+  border-right-color: #fcf8e3;
+}
+
+.popover.bottom > .arrow {
+  border-bottom-color: #faebcc;
+}
+
+.popover.bottom > .arrow:after {
+  border-bottom-color: #fcf8e3;
+}
+
+.popover.left > .arrow {
+  border-left-color: #faebcc;
+}
+
+.popover.left > .arrow:after {
+  border-left-color: #fcf8e3;
+}
+
+.btn-add-screen {
+  width: $dist-xxl;
+  height: $dist-xxl + 20px;
+  @include pad-top-btm( $dist-l );
+  @include mar-top-btm( 28px );
+  color: $clr-btn-scr-add-t;
+}
+
+.screen-node {
+  // position: relative;
+  position: absolute; // jsPlumb
+  border-top: 8px solid $clr-screen-top;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: move;
+  // margin: $dist-m;
+}
+
+.screen-input {
+  text-align: center;
+  color: $clr-txt;
+  border: none;
+  padding: $dist-s;
+  padding-top: $dist-l - 4px;
+  padding-bottom: $dist-l;
+  background-color: $clr-screen;
+}
+
+.btn-add-child-screen,
+.btn-del-screen {
+  display: none;
+  position: absolute;
+  bottom: -$dist-l;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px;
+  height: $dist-l;
+  font-size: $text-s;
+}
+
+.connect-area {
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid $clr-screen-top;
+  background-color: $clr-screen;
+  cursor: pointer;
+}
+
+.btn-add-child-screen {
+  left: 0;
+  border-bottom-left-radius: 4px;
+  color: $clr-btn-scr-add-t;
+}
+
+.btn-del-screen {
+  right: 0;
+  border-bottom-right-radius: 4px;
+  color: $clr-btn-scr-del-t;
+}
+
+// plumbs/connections
+svg path {
+  stroke: $clr-screen;
+  stroke-width: 4;
+}
+// plumbdots
+svg circle {
+  fill: rgba(0,0,0,0);
+}
+
+// RESTER FRA GAMMEL LØSNING HERFRA
+
+// .row {
+//   display: flex;
+//   justify-content: center;
+//   @include mar-top-btm($dist-l);
+// }
+
+// .stroke-vert-after,
+// .stroke-vert-before {
+//   position: absolute;
+//   height: 28px;
+//   width: 4px;
+//   left: calc( 50% - 2px );
+//   background-color: $clr-screen;
+// }
+
+// .stroke-vert-before {
+//   top: -36px;
+// }

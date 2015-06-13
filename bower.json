@@ -1,0 +1,10 @@
+{
+  "name": "006-screenflow-tool",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "modernizr": "~2.8.2",
+    "jquery-ui": "~1.11.4",
+    "jsplumb": "~1.7.5"
+  }
+}
