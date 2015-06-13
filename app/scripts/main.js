@@ -28,7 +28,9 @@ $( document ).ready( function() {
 				screenInput.attr( 'placeholder', 'Screenname' );
 			}
 
-			var connectArea = $('<div>').addClass('connect-area');
+			var connectArea = $( '<div>' ).addClass( 'connect-area' );
+
+			var hoverAreaBelowBtns = $( '<div>' ).addClass( 'hover-area-below-btns' );
 
 			var btnAddChildScreen = $( '<button>' )
 				.addClass( 'btn btn-primary btn-add-child-screen' )
@@ -49,6 +51,7 @@ $( document ).ready( function() {
 
 			screenNode.append( screenInput );
 			screenNode.append( connectArea );
+			screenNode.append( hoverAreaBelowBtns );
 			screenNode.append( btnAddChildScreen );
 			screenNode.append( btnDeleteScreen );
 
