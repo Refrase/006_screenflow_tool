@@ -59,7 +59,7 @@ $( document ).ready( function() {
 				thisScreenPos.left = $( window ).width() / 2 - 48;
 			}
 			screenNode.css({
-			  'top': thisScreenPos.top + 52, // e.pageY to place at cursor pos
+			  'top': thisScreenPos.top + 60, // e.pageY to place at cursor pos
 			  'left': thisScreenPos.left // e.pageX to place at cursor pos
 			});
 

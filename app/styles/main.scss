@@ -118,7 +118,7 @@ body {
 .screen-node {
   // position: relative;
   position: absolute; // jsPlumb
-  border-top: 8px solid $clr-screen-top;
+  border-top: 8px solid $clr-screen;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   cursor: move;
@@ -132,7 +132,7 @@ body {
   padding: $dist-s;
   padding-top: $dist-l - 4px;
   padding-bottom: $dist-l;
-  background-color: $clr-screen;
+  background-color: #fff;
 }
 
 .btn-add-child-screen,
@@ -150,8 +150,7 @@ body {
 
 .connect-area {
   width: 100%;
-  height: 20px;
-  border-top: 1px solid $clr-screen-top;
+  height: $dist-s;
   background-color: $clr-screen;
   cursor: pointer;
 }
