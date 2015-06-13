@@ -69,14 +69,6 @@ body {
   height: 100%;
 }
 
-// .alert {
-//   display: none;
-//   position: absolute;
-//   left: 32px;
-//   top: 52px;
-//   z-index: 100;
-// }
-
 .popover {
   color: #8a6d3b;
   background-color: #fcf8e3;
@@ -185,24 +177,3 @@ svg path {
 svg circle {
   fill: rgba(0,0,0,0);
 }
-
-// RESTER FRA GAMMEL LØSNING HERFRA
-
-// .row {
-//   display: flex;
-//   justify-content: center;
-//   @include mar-top-btm($dist-l);
-// }
-
-// .stroke-vert-after,
-// .stroke-vert-before {
-//   position: absolute;
-//   height: 28px;
-//   width: 4px;
-//   left: calc( 50% - 2px );
-//   background-color: $clr-screen;
-// }
-
-// .stroke-vert-before {
-//   top: -36px;
-// }
